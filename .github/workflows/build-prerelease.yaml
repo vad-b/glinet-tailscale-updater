@@ -5,7 +5,7 @@ env:
   SOFTWARE_NAME: "Tailscale"
   FILE_NAME: "tailscaled"
   REPO: "tailscale/tailscale"
-  REPO_SMALL: "Admonstrator/glinet-tailscale-updater"
+  REPO_SMALL: "vad-b/glinet-tailscale-updater"
   GIT_AUTHOR_NAME: "Admonstrator"
 jobs:
   check-versions:
@@ -44,13 +44,7 @@ jobs:
         go-version: [stable]
         os: [linux]
         platform:
-          - amd64
-          - arm
           - arm64
-          - mips
-          - mipsle
-          - mips64
-          - mips64le
     steps:
       - name: Checkout ${{ env.SOFTWARE_NAME }} repository
         uses: actions/checkout@v4
